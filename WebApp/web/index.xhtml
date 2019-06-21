@@ -10,11 +10,13 @@
         <p:layout fullPage="true">
                 <p:layoutUnit position="center" size="100" resizable="true" closable="true" collapsible="true">
                     <div style="text-align: center" >
-                        <p:inputText placeholder="Username"/>
-                        <p:password placeholder="Password"/><br/>
-                        <p:button value="login"/>
+                        <h:form>
+                        <p:inputText placeholder="Username" value="#{login.username}"/>
+                        <p:password placeholder="Password" value="#{login.password}"/><br/>
+                        <p:commandButton value="login" action="#{login.login()}"/>
                         <p:button value="signUp"/><br/>
                         <h:link outcome="welcomePrimefaces" value="Primefaces welcome page" />
+                        </h:form>
                     </div>
                 </p:layoutUnit>
             </p:layout>
